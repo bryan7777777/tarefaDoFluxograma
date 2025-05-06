@@ -7,7 +7,7 @@ function tabuadaPrime() {
 
     i = 0;
     saida = ''
-    
+
     while (i <= limite){
         result = tabuada * i;
         if (i===0) {
@@ -45,3 +45,5 @@ function tarefaUm() {
 }
 
 tarefaUm();
+
+// return "variavel"; retorna uma variavel para a função no qual ele está dentro
