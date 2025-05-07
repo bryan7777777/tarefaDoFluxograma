@@ -1,10 +1,10 @@
 //escopo global
  
-function Tabuada(tabuadaUsuario){
+function Tabuada(tabuadaUsuario, limiteDaTabuada){
     //escopo específico
-    let contador, resultado, saidaTabuada;
+    let contador = 0, resultado, saidaTabuada;
  
-    while (contador <= 10) {    
+    while (contador <= limiteDaTabuada) {    
         //Atribuindo valor a variavel resultado
         resultado = tabuadaUsuario * contador;
         if (contador === 0) {
@@ -14,10 +14,9 @@ function Tabuada(tabuadaUsuario){
         }
         contador = contador + 1; //contador++;        
     }    
-    return tabuadaUsuario;
+    return saidaTabuada;
 }
- 
- 
+
 function main() {
     //Declarando Variaveis
     let tabuada;
@@ -25,12 +24,15 @@ function main() {
     //Entrada de dados
     //Atribuindo valor a variavel (tabuada)
     tabuada = Number(prompt("Qual a tabuada você deseja resolver?"));
-     
+    limiteDaTabuada = Number(prompt('Até quanto você deseja que vá a tabuada?')) 
+ 
     // REPETIÇÃO COM WHILE
     //Enquanto contador for menor ou igual a 10 for verdade repetir se não falso
-    console.log(Tabuada(tabuada));
-    alert(Tabuada(tabuada));    
+    console.log(Tabuada(tabuada, limiteDaTabuada));
+    alert(Tabuada(tabuada, limiteDaTabuada));   
 }
+
+
  
 // pegar os dados
 // faz tabuada
